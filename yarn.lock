@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@alexjorgef/gatsby-source-github@^0.0.5, @alexjorgef/gatsby-source-github@workspace:plugin":
+"@alexjorgef/gatsby-source-github@^0.0.1, @alexjorgef/gatsby-source-github@workspace:plugin":
   version: 0.0.0-use.local
   resolution: "@alexjorgef/gatsby-source-github@workspace:plugin"
   dependencies:
@@ -7621,7 +7621,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "demo@workspace:demo"
   dependencies:
-    "@alexjorgef/gatsby-source-github": ^0.0.5
+    "@alexjorgef/gatsby-source-github": ^0.0.1
     gatsby: ^5.12.1
     gatsby-adapter-netlify: ^1.0.0
     react: ^18.2.0

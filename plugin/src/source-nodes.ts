@@ -11,10 +11,10 @@ export const sourceNodes: GatsbyNode["sourceNodes"] = async (gatsbyApi, pluginOp
   const headers = {
     Authorization: `Bearer ${accessToken}`,
   }
+  gatsbyApi.reporter.verbose(`Starting GitHub requests (${apiUrl})...`)
   const client = new GraphQLClient(apiUrl, {
     headers,
   })
-  gatsbyApi.reporter.verbose(`Starting GitHub requests (${client.url})...`)
 
   const getRootEl = (obj: Record<string, any>): string => Object.keys(obj).shift()
 
