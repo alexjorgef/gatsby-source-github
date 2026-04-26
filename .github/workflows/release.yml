@@ -42,15 +42,6 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Use latest npm
-        run: corepack prepare npm@11.5.1 --activate
-
-      - name: Verify npm version
-        run: npm --version
-
       - name: Install Dependencies
         run: yarn --immutable
 
