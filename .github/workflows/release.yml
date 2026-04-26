@@ -42,8 +42,6 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
 
-      - run: npm install -g npm@latest; npm --version
-
       - name: Install Dependencies
         run: yarn --immutable
 
