@@ -60,8 +60,8 @@ export const sourceNodes: GatsbyNode["sourceNodes"] = async (gatsbyApi, pluginOp
         const rootName = getRootEl(edge)
         const rootElement = edge[rootName]
         const { edges, ...rest } = rootElement
-        if (rootElement && Array.isArray(rootElement.edges)) {
-          rootElement.edges.forEach((childNode: any, edgeIndex: number) => {
+        if (rootElement && Array.isArray(edges)) {
+          edges.forEach((childNode: any, edgeIndex: number) => {
             const node = childNode.node || childNode
             gatsbyApi.actions.createNode({
               ...rest,
