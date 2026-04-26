@@ -47,13 +47,19 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
 
-      # - name: Configure Yarn npm auth (npmjs)
-      #   run: yarn config set npmRegistryServer "https://registry.npmjs.org"
+      - name: Configure npm auth (npmjs)
+        run: |
+          yarn config set npmRegistryServer "https://registry.npmjs.org"
+          yarn config set npmAuthToken "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish package to npmjs
         run: yarn package:publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Configure Yarn npm auth (GitHub)
+      - name: Configure npm auth (GitHub)
         run: |
           yarn config set npmRegistryServer "https://npm.pkg.github.com"
           yarn config set npmAuthToken "${GITHUB_TOKEN}"
