@@ -15,9 +15,9 @@ Original error: ${context.sourceMessage}`,
       text: (context) =>
         `There was an error creating the "${NODE_TYPE_BASE}" node.
 
-Original error (username: ${context.username}): ${context.sourceMessage}`,
+Original error (apiUrl: ${context.apiUrl}): ${context.sourceMessage}`,
       level: `ERROR`,
-      category: `USER`,
+      category: `THIRD_PARTY`,
     },
   })
 }

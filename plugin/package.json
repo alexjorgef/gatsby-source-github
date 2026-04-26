@@ -1,6 +1,6 @@
 {
   "name": "@alexjorgef/gatsby-source-github",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gatsby source plugin for GitHub",
   "main": "dist/gatsby-node.js",
   "source": "src/gatsby-node.ts",
