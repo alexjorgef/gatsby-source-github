@@ -40,7 +40,7 @@
     "develop": "yarn workspace demo develop",
     "build": "yarn workspace demo build",
     "serve": "yarn workspace demo serve",
-    "package:publish": "yarn workspace @alexjorgef/gatsby-source-github npm publish --access public",
+    "package:publish": "yarn workspace @alexjorgef/gatsby-source-github npm publish --provenance --access public",
     "package:watch": "yarn workspace @alexjorgef/gatsby-source-github watch",
     "package:build": "yarn workspace @alexjorgef/gatsby-source-github prepare",
     "typecheck": "tsc --noEmit",

@@ -39,24 +39,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '24'
+          node-version: 24.x
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
         run: yarn --immutable
 
-      # - name: Configure npm auth (npmjs)
-      #   run: |
-      #     yarn config set npmRegistryServer "https://registry.npmjs.org"
-      #     yarn config set npmAuthToken "${NODE_AUTH_TOKEN}"
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Publish package to npmjs
         run: yarn package:publish
-        env:
-          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
 
       - name: Configure npm auth (GitHub)
         run: |
